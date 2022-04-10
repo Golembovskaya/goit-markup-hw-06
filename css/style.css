@@ -117,7 +117,8 @@ left: 50%;
 transform: translate(-50%,-50%);
 width: 528px;
 height: 580px;
-background: #FFFFFF;;
+background: #FFFFFF;
+padding: 40px;
 }
 .modal-close-btn{
 display: flex;
@@ -131,6 +132,36 @@ right: 8px;
 border-radius: 50%;
 cursor: pointer;
 border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.modal-form{
+display: flex;
+flex-direction: column;
+}
+.modal-form-title{
+font-family: var(--main-font-family);
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 23px;
+text-align: center;
+letter-spacing: 0.03em;
+
+color: #212121;
+margin-bottom: 15px;
+}
+.modal-form-field{
+}
+.modal-form-input{
+width: 100%;
+height: 40px;
+
+border: 1px solid rgba(33, 33, 33, 0.2);
+box-sizing: border-box;
+border-radius: 4px;
+padding-left: 42px;
+cursor: pointer;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4,0,0.2,1);
 }
 /*Конец Секции 1 студии*/
 /*Начало Секции 2 студии*/
@@ -728,7 +759,8 @@ margin-right: 93px;
   line-height: 1.143;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-bottom: 20px;width: 206px;
+  margin-bottom: 20px;
+  width: 206px;
 
   color: #ffffff;
 }
@@ -775,6 +807,9 @@ margin-right: 93px;
   margin-right: 70px;
   
 }
+.subscribe{
+  width: 570px;
+}
 .footer-subscribe{
 font-family: var(--main-font-family);
 font-style: normal;
@@ -786,6 +821,9 @@ text-transform: uppercase;
 margin-bottom: 20px;
 color: #FFFFFF;
 }
+.footer-form-item{
+display: flex;
+}
 .footer-form-input{
 width: 358px;
 height: 50px;
@@ -793,8 +831,13 @@ padding-left: 16px;
 margin-right: 12px;
 border: 1px solid rgba(255, 255, 255, 0.3);
 box-sizing: border-box;
-/*filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));*/
-border-radius: 4px;background: #2F303A;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+border-radius: 4px;
+background: transparent;
+display: flex;
+color: #FFFFFF;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4,0,0.2,1);
 }
 .footer-form-input::placeholder{
 font-family: var(--main-font-family);
@@ -802,32 +845,55 @@ font-style: normal;
 font-weight: 400;
 font-size: 16px;
 line-height: 1.25;
-display: flex;
 align-items: center;
 letter-spacing: 0.03em;
 
 color: rgba(255, 255, 255, 0.6);
 }
+.footer-form-input:focus{
+border-color: var(--navigation-color);
+outline: none;
+
+}
 .submit-btn{
-display: inline-flex;
+display: flex;
 justify-content: center;
 width: 200px;
 height: 50px;
 background: #2196F3;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-border-radius: 4px;font-family: 'Roboto';
+border-radius: 4px;
+font-family: var(--main-font-family);
 font-style: normal;
 font-weight: 700;
 font-size: 16px;
-line-height: 30px;
-display: flex;
+line-height: 1.87;
 align-items: center;
 text-align: center;
 letter-spacing: 0.06em;
+border: transparent;
 
 color: #FFFFFF;
-
+cursor: pointer;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.submit-btn:hover,
+.submit-btn:focus{
+background-color: var(--btn-background);
+}
+.form-btn-icon{
+margin-left: 10px;
+}
+/*.submit-btn::after{
+  content: '';
+  margin-left: 9px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/symbol-defs.svg#icon-send);
+  background-repeat: no-repeat;
+  background-position: center;
+}*/
 .footer-form-wrapper{
  align-items: baseline;
 }
