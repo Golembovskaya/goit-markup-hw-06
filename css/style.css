@@ -130,12 +130,27 @@ height: 30px;
 top: 8px;
 right: 8px;
 border-radius: 50%;
+background: #FFFFFF;
 cursor: pointer;
 border: 1px solid rgba(0, 0, 0, 0.1);
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-form{
-display: flex;
-flex-direction: column;
+.modal-close-btn:focus,
+.modal-close-btn:active,
+.modal-close-btn:hover {
+  fill: var(--navigation-color);
+}
+.modal-form a{
+font-family: var(--main-font-family);
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 1.71;
+
+letter-spacing: 0.03em;
+text-decoration-line: underline;
+
+color:var(--navigation-color);
 }
 .modal-form-title{
 font-family: var(--main-font-family);
@@ -150,6 +165,20 @@ color: #212121;
 margin-bottom: 15px;
 }
 .modal-form-field{
+display: block;
+text-align: left;
+font-family: var(--main-font-family);
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+letter-spacing: 0.01em;
+
+color: #757575;
+}
+.modal-form-field:not(:last-child) {
+  margin-bottom: 10px;
 }
 .modal-form-input{
 width: 100%;
@@ -160,8 +189,148 @@ box-sizing: border-box;
 border-radius: 4px;
 padding-left: 42px;
 cursor: pointer;
+
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+outline 250ms cubic-bezier(0.4, 0, 0.2, 1),
+fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-input:focus,
+.modal-form-input:hover,
+.container-icon:hover{
+outline: none;
+border-color: var(--navigation-color);
+cursor: pointer;
+fill: var(--navigation-color);
+
+}
+.modal-form-input:focus + .input-icon{
+fill: var(--navigation-color);
+}
+.container-icon{
+display: block;
+position: relative;
+margin-top: 5px;
+}
+.input-icon{
+width: 12px;
+height: 12px;
+position: absolute;
+top: 50%;
+left: 10px;
+transform: translateY(-50%);
+
 transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-message {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  padding: 12px 16px;
+  outline: none;
+  margin-top: 5px;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-message::placeholder{
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-form-message:focus {
+  border-color: var(--navigation-color);
+}
+.modal-form-checkbox-policy{
+display: flex;
+align-items: center;
+font-family: var(--main-font-family);
+font-style: normal;
+font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+color: var(--secondary-text-color);
+}
+.modal-form-checkbox-policy::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  /*background: url(../image/submit.svg);*/
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 13px;
+  vertical-align: middle;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-checkbox:checked+.modal-form-checkbox-policy::before {
+background-color: #2196F3;
+border: 2px solid #2196F3;
+border-radius: 2px;
+background-image: url('../img/checkbox.svg');background-position: center;}
+  /*
+  background: url(../image/accept\ strike.svg), url(../image/accept.svg);
+  background-repeat: no-repeat;
+  background: #2196f3;
+  background-position: center;
+  width: 16px;
+  height: 15px;
+  fill: var(--accent-color);
+}*/
+.modal-form-checkbox:checked+.modal-form-checkbox-policy::before{
+  outline:2px solid #2196f3;
+}
+.modal-form-btn {
+  width: 200px;
+  min-height: 50px;
+  background: #2196F3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin: 30px auto 0 auto;
+  border: none;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-btn:hover,
+.modal-form-btn:focus {
+  cursor: pointer;
+  background: #188CE8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 /*Конец Секции 1 студии*/
 /*Начало Секции 2 студии*/
