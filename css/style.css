@@ -279,16 +279,9 @@ color: var(--secondary-text-color);
 background-color: #2196F3;
 border: 2px solid #2196F3;
 border-radius: 2px;
-background-image: url('../img/checkbox.svg');background-position: center;}
-  /*
-  background: url(../image/accept\ strike.svg), url(../image/accept.svg);
-  background-repeat: no-repeat;
-  background: #2196f3;
-  background-position: center;
-  width: 16px;
-  height: 15px;
-  fill: var(--accent-color);
-}*/
+background-image: url('../img/checkbox.svg');
+background-position: center;
+}
 .modal-form-checkbox:checked+.modal-form-checkbox-policy::before{
   outline:2px solid #2196f3;
 }
