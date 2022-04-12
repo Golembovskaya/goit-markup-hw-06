@@ -265,7 +265,6 @@ color: var(--secondary-text-color);
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
-  /*background: url(../image/submit.svg);*/
   border-radius: 2px;
   cursor: pointer;
   margin-right: 10px;
@@ -279,7 +278,7 @@ color: var(--secondary-text-color);
 background-color: #2196F3;
 border: 2px solid #2196F3;
 border-radius: 2px;
-background-image: url('../img/checkbox.svg');
+background-image: url('../img/icon-checkbox.svg');
 background-position: center;
 }
 .modal-form-checkbox:checked+.modal-form-checkbox-policy::before{
